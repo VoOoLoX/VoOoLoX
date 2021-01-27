@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<meta name='description' content='Personal portfolio website.'>
+
+	<link rel='prefetch' href='//cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.17.0/core.min.js' as='script' type='text/javascript'>
+
+	<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css'>
+	<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css'>
+	<link rel='stylesheet' href='//fonts.googleapis.com/css2?family=Roboto&display=swap'>
+	<link rel='stylesheet' href='/css/index.css'>
+
+	<script>var form_submitted = false;</script>
+
+	<title>Daniel Vulić</title>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<a href='' class='nav-button'>Home</a>
+			<a href='#projects' class='nav-button'>Projects</a>
+			<svg id='logo' viewBox='0 87 1000 826' width='100' height='100'>
+				<path fill='none' stroke='#ffffff' stroke-linejoin='round' stroke-width='40' d='M 20 87 H 500 L 620 293.5 L 500 500 L 380 293.5 H 620 L 740 500 H 260 L 500 87 H 980 L 500 913 Z '></path>
+			</svg>
+			<a href='#contact' class='nav-button'>Contact</a>
+			<a href='/blog.html' class='nav-button'>Blog</a>
+		</nav>
+	</header>
+
+	<section id='home'>
+		<p id='first-line'>My name is <b>Daniel</b><br>I'm <span id='skills'></span></p>
+		<p id='second-line'>Want to hire me?<br> Check my work down below</p>
+		<a href='#projects' id='arrow' class='animated bounce infinite slow'><i class='icon-mouse'></i></a>
+	</section>
+
+	<main id='projects' class='content-section'>
+		<h1>My work</h1>
+		<div id='projects_container'>
+			<div id='arrow_left' class='animated fadeOut fast'><i class='im im-angle-left'></i></div>
+			<div id='arrow_right' class='animated fadeIn fast'><i class='im im-angle-right'></i></div>
+			<div id='horizontal_scroll'>
+				<!-- <a class='item' href='#' style='background-image: url('assets/images/game_engine.png');'>
+					<p class='title'>3D Game engine</p>
+					<p class='desc'>Simple 3D game engine which is being developed along with the game that's using it. Whole game engine is made in C# using .NET Core framework.</p>
+				</a>
+				<a class='item' href='#' style='background-image: url('assets/images/game_server.png');'>
+					<p class='title'>Game server</p>
+					<p class='desc'>Multi threaded game server to accompany the game that I'm working on. Also made in C# using .NET Core framework.</p>
+				</a>
+				<a class='item' href='#' style='background-image: url('assets/images/3d_assets.png');'>
+					<p class='title'>3D Assets</p>
+					<p class='desc'>Making 3D assets kind of became my hobby as I needed some for the game but I do make some in my spare time just for fun.</p>
+				</a>
+				<a class='item' href='#' style='background-image: url('assets/images/hacking.png');'>
+					<p class='title'>Hacking</p>
+					<p class='desc'>Hacking is a very fun activity for me even though I'm still very inexpirienced. I mostly focus on binary reverse engineering and simple web challenges.</p>
+				</a>
+				<a class='item' href='#' style='background-image: url('assets/images/web_dev.png');'>
+					<p class='title'>Web development</p>
+					<p class='desc'>It's basically an essential skill in this day and age. Kids in elementary school learn basics of HTML and CSS. As all things it takes a lot of time to master it.</p>
+				</a> -->
+			</div>
+		</div>
+	</main>
+
+	<section id='contact' class='content-section'>
+		<h1>Contact me</h1>
+		<iframe name='hidden_iframe' id='hidden_iframe' style='display:none;' onload='if(form_submitted) {alert(1)}'></iframe>
+		<div id='contact_container'>
+			<form action='https://docs.google.com/forms/u/0/d/e/1FAIpQLScJ_0qxaUpeM1maIvl4bKC7385EypsrBP1i4ksj7qg60_b-WQ/formResponse' method='post' target='hidden_iframe' onsubmit='submit_form(this, event)'>
+				<h2 class='contact_heading'>Send me a message</h2>
+				<label for='input_email'>Email</label>
+				<input type='email' required id='input_email' name=' entry.1240266346' placeholder='johndoe@example.com'>
+
+				<label for='input_name'>Name</label>
+				<input type='text' id='input_name' name='entry.813806805' placeholder='John Doe'>
+
+				<label for='input_subject'>Subject</label>
+				<input type='text' id='input_subject' name='entry.434626942' placeholder='Subject'>
+
+				<label for='input_message'>Message</label>
+				<textarea id='input_message' name='entry.731434310' placeholder='Message' rows='10'></textarea>
+
+				<input type='submit' value='Send' />
+			</form>
+
+			<div id='connections'>
+				<h2 class='contact_heading'>Reach me directly</h2>
+				<span class='contact_info'>
+					<a href='mailto:daniel@vulic.xyz'><i class='icon-envelope'></i>daniel@vulic.xyz</a>
+				</span>
+
+				<h2 class='contact_heading'>Find me online</h2>
+				<span class='contact_info'>
+					<a href='https://instagram.com/vooolox' target='_blank' rel='noreferrer'><i class='icon-social-instagram'></i>vooolox</a>
+					<a href='https://twitter.com/vooolox' target='_blank' rel='noreferrer'><i class='icon-social-twitter'></i>vooolox</a>
+					<a href='https://github.com/vooolox' target='_blank' rel='noreferrer'><i class='icon-social-github'></i>vooolox</a>
+				</span>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<p id='copyright'>Copyright &copy; 2020 <b>Daniel Vuli&#x0107;</b> &horbar; All rights reserved.</p>
+	</footer>
+
+	<script async src='//cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.17.0/core.min.js'></script>
+	<script async src='/js/strings.js'></script>
+	<script async src='/js/index.js'></script>
+</body>
+
+</html>
